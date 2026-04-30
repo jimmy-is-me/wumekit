@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WumeKit — 一條龍網站服務</title>
   <meta name="description" content="WumeKit 提供一條龍網站建置服務，包含網域、主機、網站設計，快速上線不費力。" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-weight='bold' font-family='Arial,sans-serif' fill='%2322c55e'>W</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -143,7 +144,7 @@
           <div class="ps-card">
             <div class="ps-icon">✨</div>
             <h3>網站建置</h3>
-            <p>套用模板、填入品牌内容、調整配色與版面布局至你滿意。</p>
+            <p>套用模板、填入品牌內容、調整配色與版面布局，完成初版設計。</p>
             <span class="ps-time">Day 2–3</span>
           </div>
         </div>
@@ -151,8 +152,8 @@
           <div class="ps-dot">5</div>
           <div class="ps-card">
             <div class="ps-icon">🔍</div>
-            <h3>審核與测試</h3>
-            <p>上線前檢查行動裝置、載入速度、SEO 基礎設定與表單功能。</p>
+            <h3>審核與測試</h3>
+            <p>上線前檢查行動裝置顯示與表單功能是否正常。</p>
             <span class="ps-time">Day 3</span>
           </div>
         </div>
@@ -161,7 +162,7 @@
           <div class="ps-card ps-card--accent">
             <div class="ps-icon">🉐</div>
             <h3>正式上線</h3>
-            <p>確認內容後一鍵上線，交付帳號密碼，網站完全屬於你。</p>
+            <p>確認內容後完成上線，交付帳號密碼，網站完全屬於你。</p>
             <span class="ps-time">完成 🎉</span>
           </div>
         </div>
@@ -191,7 +192,7 @@
           <li>SSL 安全憑證</li>
           <li>每月維護更新</li>
         </ul>
-        <a href="#contact" class="btn btn-outline w-full">選擇此方案</a>
+        <a href="#contact" class="btn btn-outline w-full plan-select-btn" data-plan-index="1">選擇此方案</a>
       </div>
       <div class="pricing-card pricing-card--featured">
         <div class="plan-badge">最受歡迎</div>
@@ -199,7 +200,7 @@
         <div class="plan-name">品牌方案</div>
         <div class="plan-price">
           <span class="p-amount">NT$19,900</span>
-          <span class="p-label">建置費</span>
+          <span class="p-label" style="color:#ffffff">建置費</span>
         </div>
         <div class="p-sub">+ NT$1,990 / 月</div>
         <ul class="plan-features">
@@ -210,7 +211,7 @@
           <li>Google Analytics 整合</li>
           <li>優先技術支援</li>
         </ul>
-        <a href="#contact" class="btn btn-white w-full">選擇此方案</a>
+        <a href="#contact" class="btn btn-white w-full plan-select-btn" data-plan-index="2">選擇此方案</a>
       </div>
       <div class="pricing-card">
         <div class="plan-tag plan-tag--dark">企業</div>
@@ -226,7 +227,7 @@
           <li>專屬帳號管理</li>
           <li>24hr 支援服務</li>
         </ul>
-        <a href="#contact" class="btn btn-outline w-full">聯繫我們</a>
+        <a href="#contact" class="btn btn-outline w-full plan-select-btn" data-plan-index="3">聯繫我們</a>
       </div>
     </div>
   </div>
@@ -329,6 +330,17 @@
     ham.classList.remove('open');
     mm.classList.remove('open');
   }));
+
+  // Plan auto-select: click "選擇此方案" → auto-select plan in contact form
+  document.querySelectorAll('.plan-select-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const idx = parseInt(btn.getAttribute('data-plan-index'));
+      const sel = document.getElementById('f-plan');
+      if (!isNaN(idx) && sel.options[idx]) {
+        sel.selectedIndex = idx;
+      }
+    });
+  });
 
   // Discord Form
   const WEBHOOK = 'https://discordapp.com/api/webhooks/1499299619589456013/bbRH7GGtjsHRxP0U5DXrWMICySVWZPRWAT1Nnx1FFr6vKr03Fv91-6xWLyBcPn_M8iIH';
