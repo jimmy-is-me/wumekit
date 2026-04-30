@@ -3,8 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WumeKit — 一條龍網站服務</title>
-  <meta name="description" content="WumeKit 提供一條龍網站建置服務，包含網域、主機、網站設計，快速上線不費力。" />
+  <title>WumeKit — 一條龍網站建置服務</title>
+  <meta name="description" content="WumeKit 提供一條龍網站建置服務，包含網域申請、主機架設、網站設計，幾天內快速上線，不需工程師。" />
+  <meta name="keywords" content="網站建置,網頁設計,WordPress,WooCommerce,網域申請,主機架設,SEO,台灣,一條龍網站服務,WumeKit" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="WumeKit" />
+  <link rel="canonical" href="https://wumekit.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="WumeKit — 一條龍網站建置服務" />
+  <meta property="og:description" content="網域、主機、網站設計一次搞定。不用請工程師，幾天內快速上線。" />
+  <meta property="og:url" content="https://wumekit.com/" />
+  <meta property="og:site_name" content="WumeKit" />
+  <meta property="og:locale" content="zh_TW" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WumeKit — 一條龍網站建置服務" />
+  <meta name="twitter:description" content="網域、主機、網站設計一次搞定。不用請工程師，幾天內快速上線。" />
+
+  <!-- GEO -->
+  <meta name="geo.region" content="TW" />
+  <meta name="geo.placename" content="Taiwan" />
+  <meta name="language" content="zh-TW" />
+  <meta name="content-language" content="zh-TW" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "WumeKit",
+    "description": "一條龍網站建置服務，包含網域申請、主機架設、網站設計、維護管理。",
+    "url": "https://wumekit.com",
+    "areaServed": "TW",
+    "serviceType": ["網站建置", "網頁設計", "主機架設", "網域申請"],
+    "priceRange": "NT$9,900起",
+    "inLanguage": "zh-TW",
+    "address": { "@type": "PostalAddress", "addressCountry": "TW" },
+    "offers": [
+      { "@type": "Offer", "name": "入門方案", "price": "9900", "priceCurrency": "TWD", "description": "網域申請、主機架設、精選模板套用、SSL 安全憑證、每月維護" },
+      { "@type": "Offer", "name": "品牌方案", "price": "19900", "priceCurrency": "TWD", "description": "客製化設計調整、獨立主機資源、電商功能、Google Analytics 整合" }
+    ],
+    "sameAs": ["https://wumekit.com"]
+  }
+  </script>
+
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-weight='bold' font-family='Arial,sans-serif' fill='%2322c55e'>W</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,6 +57,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+<!-- LEFT PAGE NAV -->
+<nav class="page-nav" id="pageNav" aria-label="頁面快速導航">
+  <div class="page-nav-handle" id="pageNavHandle">⠿</div>
+  <a href="#features" class="pn-item" data-section="features"><span class="pn-dot"></span><span class="pn-label">服務</span></a>
+  <a href="#process"  class="pn-item" data-section="process" ><span class="pn-dot"></span><span class="pn-label">流程</span></a>
+  <a href="#pricing"  class="pn-item" data-section="pricing" ><span class="pn-dot"></span><span class="pn-label">方案</span></a>
+  <a href="#contact"  class="pn-item" data-section="contact" ><span class="pn-dot"></span><span class="pn-label">聯繫</span></a>
+</nav>
 
 <!-- NAV -->
 <nav class="nav">
@@ -37,9 +91,9 @@
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#features" class="mm-link">服務</a>
-  <a href="#process" class="mm-link">流程</a>
-  <a href="#pricing" class="mm-link">方案</a>
-  <a href="#contact" class="mm-link">聯繫</a>
+  <a href="#process"  class="mm-link">流程</a>
+  <a href="#pricing"  class="mm-link">方案</a>
+  <a href="#contact"  class="mm-link">聯繫</a>
   <a href="#contact" class="btn btn-primary" style="text-align:center;margin-top:8px">立即諮詢</a>
 </div>
 
@@ -48,8 +102,8 @@
   <div class="hero-blob"></div>
   <div class="container hero-inner">
     <span class="badge">🚀 一條龍 · 快速上線</span>
-    <h1>你的網站，<br /><span class="gradient-text">我們全包辦。</span></h1>
-    <p class="hero-sub">網域、主機、網站設計一次搞定。<br />不用請工程師，不用懀技術，幾天內上線。</p>
+    <h1>你的網站<br /><span class="gradient-text">我們全包辦</span></h1>
+    <p class="hero-sub">網域、主機、網站設計一次搞定<br />不用請工程師，不用懂技術，幾天內上線</p>
     <div class="hero-cta">
       <a href="#pricing" class="btn btn-primary btn-lg">查看方案</a>
       <a href="#process" class="btn btn-outline btn-lg">建置流程 ↓</a>
@@ -68,7 +122,7 @@
 <section class="features" id="features">
   <div class="container">
     <div class="section-label">服務內容</div>
-    <h2>一個方案，包含所有你需要的。</h2>
+    <h2>一個方案 包含所有你需要的</h2>
     <div class="features-grid">
       <div class="feature-card fc-green">
         <div class="fc-icon">🌐</div>
@@ -108,9 +162,8 @@
 <section class="process" id="process">
   <div class="container">
     <div class="section-label">建置流程</div>
-    <h2>從零到上線，我們全程陥伴。</h2>
+    <h2>從零到上線 我們全程陪伴</h2>
     <div class="process-track">
-      <div class="process-line"></div>
       <div class="process-steps">
         <div class="ps">
           <div class="ps-dot">1</div>
@@ -175,7 +228,7 @@
 <section class="pricing" id="pricing">
   <div class="container">
     <div class="section-label">方案費用</div>
-    <h2>透明定價，無隱藏費用。</h2>
+    <h2>透明定價 無隱藏費用</h2>
     <div class="pricing-grid">
       <div class="pricing-card">
         <div class="plan-tag">入門</div>
@@ -238,7 +291,7 @@
   <div class="container">
     <div class="contact-inner">
       <div class="section-label">聯繫我們</div>
-      <h2>準備好了嗎？</h2>
+      <h2>準備好了嗎</h2>
       <p class="contact-sub">填寫表單，我們將在一個工作天內與你聯繫。</p>
       <form class="contact-form" id="contactForm">
         <div class="form-row">
@@ -308,6 +361,9 @@
   </div>
 </footer>
 
+<!-- BACK TO TOP -->
+<button id="backToTop" class="back-to-top" aria-label="回到最上">↑</button>
+
 <script>
   // Theme Toggle
   const html = document.documentElement;
@@ -331,16 +387,75 @@
     mm.classList.remove('open');
   }));
 
-  // Plan auto-select: click "選擇此方案" → auto-select plan in contact form
+  // Plan auto-select
   document.querySelectorAll('.plan-select-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const idx = parseInt(btn.getAttribute('data-plan-index'));
       const sel = document.getElementById('f-plan');
-      if (!isNaN(idx) && sel.options[idx]) {
-        sel.selectedIndex = idx;
-      }
+      if (!isNaN(idx) && sel.options[idx]) sel.selectedIndex = idx;
     });
   });
+
+  // Back to Top
+  const btt = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', window.scrollY > 400);
+  });
+  btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // Page Nav — active section highlight
+  const pnItems = document.querySelectorAll('.pn-item');
+  const sectionIds = ['features', 'process', 'pricing', 'contact'];
+  const ioOpts = { threshold: 0.35 };
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        pnItems.forEach(i => i.classList.remove('active'));
+        const a = document.querySelector(`.pn-item[data-section="${entry.target.id}"]`);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, ioOpts);
+  sectionIds.forEach(id => { const el = document.getElementById(id); if (el) io.observe(el); });
+
+  // Page Nav — draggable
+  const pageNav = document.getElementById('pageNav');
+  let dragging = false, dragStartY = 0, navStartTop = 0;
+  pageNav.addEventListener('mousedown', e => {
+    dragging = true;
+    dragStartY = e.clientY;
+    navStartTop = pageNav.getBoundingClientRect().top;
+    pageNav.style.transform = 'none';
+    pageNav.style.top = navStartTop + 'px';
+    document.body.style.userSelect = 'none';
+    pageNav.style.cursor = 'grabbing';
+  });
+  document.addEventListener('mousemove', e => {
+    if (!dragging) return;
+    let newTop = navStartTop + (e.clientY - dragStartY);
+    newTop = Math.max(80, Math.min(window.innerHeight - pageNav.offsetHeight - 16, newTop));
+    pageNav.style.top = newTop + 'px';
+  });
+  document.addEventListener('mouseup', () => {
+    dragging = false;
+    document.body.style.userSelect = '';
+    pageNav.style.cursor = 'grab';
+  });
+  // Touch support
+  pageNav.addEventListener('touchstart', e => {
+    dragging = true;
+    dragStartY = e.touches[0].clientY;
+    navStartTop = pageNav.getBoundingClientRect().top;
+    pageNav.style.transform = 'none';
+    pageNav.style.top = navStartTop + 'px';
+  }, { passive: true });
+  document.addEventListener('touchmove', e => {
+    if (!dragging) return;
+    let newTop = navStartTop + (e.touches[0].clientY - dragStartY);
+    newTop = Math.max(80, Math.min(window.innerHeight - pageNav.offsetHeight - 16, newTop));
+    pageNav.style.top = newTop + 'px';
+  }, { passive: true });
+  document.addEventListener('touchend', () => { dragging = false; });
 
   // Discord Form
   const WEBHOOK = 'https://discordapp.com/api/webhooks/1499299619589456013/bbRH7GGtjsHRxP0U5DXrWMICySVWZPRWAT1Nnx1FFr6vKr03Fv91-6xWLyBcPn_M8iIH';
