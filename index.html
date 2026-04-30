@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-TW" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,11 +14,17 @@
 
   <!-- NAV -->
   <nav class="nav">
-    <a href="/" class="nav-logo">wumekit</a>
+    <a href="/" class="nav-logo">
+      <span class="logo-mark">W</span>umeKit
+    </a>
     <div class="nav-links">
       <a href="#features">服務</a>
       <a href="#pricing">方案</a>
-      <a href="#contact" class="btn btn-sm">立即諮詢</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="theme-icon theme-icon--sun">☀️</span>
+        <span class="theme-icon theme-icon--moon">🌙</span>
+      </button>
+      <a href="#contact" class="btn btn-sm btn-primary">立即諮詢</a>
     </div>
   </nav>
 
@@ -32,8 +38,15 @@
         <a href="#pricing" class="btn btn-primary">查看方案</a>
         <a href="#features" class="btn btn-ghost">了解服務 →</a>
       </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>3天</strong><span>平均上線</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>100%</strong><span>包辦服務</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>24/7</strong><span>技術支援</span></div>
+      </div>
     </div>
-    <div class="hero-glow"></div>
+    <div class="hero-blob"></div>
   </section>
 
   <!-- FEATURES -->
@@ -163,25 +176,45 @@
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="container">
+      <div class="section-label">聯繫我們</div>
       <h2>準備好了嗎？</h2>
-      <p>填寫表單，我們將在一個工作天內與你聯繫。</p>
-      <form class="contact-form">
+      <p class="contact-sub">填寫表單，我們將在一個工作天內與你聯繫。</p>
+      <form class="contact-form" id="contactForm">
         <div class="form-row">
-          <input type="text" placeholder="你的姓名" required />
-          <input type="text" placeholder="公司 / 品牌名稱" />
+          <div class="form-group">
+            <label>姓名</label>
+            <input type="text" id="f-name" placeholder="你的姓名" required />
+          </div>
+          <div class="form-group">
+            <label>公司 / 品牌</label>
+            <input type="text" id="f-company" placeholder="公司或品牌名稱" />
+          </div>
         </div>
         <div class="form-row">
-          <input type="email" placeholder="Email" required />
-          <input type="tel" placeholder="聯絡電話" />
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="f-email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label>聯絡電話</label>
+            <input type="tel" id="f-phone" placeholder="09xx-xxx-xxx" />
+          </div>
         </div>
-        <select>
-          <option value="" disabled selected>選擇方案</option>
-          <option>入門方案</option>
-          <option>品牌方案</option>
-          <option>企業方案</option>
-        </select>
-        <textarea placeholder="簡單描述你的網站需求（產業、風格參考等）"></textarea>
-        <button type="submit" class="btn btn-primary">送出諮詢</button>
+        <div class="form-group">
+          <label>選擇方案</label>
+          <select id="f-plan">
+            <option value="" disabled selected>請選擇方案</option>
+            <option>入門方案（NT$9,900 + $1,200/月）</option>
+            <option>品牌方案（NT$19,900 + $1,990/月）</option>
+            <option>企業方案（客製報價）</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>需求說明</label>
+          <textarea id="f-msg" placeholder="簡單描述你的網站需求（產業、風格參考等）"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submitBtn">送出諮詢</button>
+        <div class="form-msg" id="formMsg"></div>
       </form>
     </div>
   </section>
@@ -191,7 +224,7 @@
     <div class="container">
       <div class="footer-top">
         <div>
-          <div class="footer-logo">wumekit</div>
+          <div class="footer-logo"><span class="logo-mark">W</span>umeKit</div>
           <p class="footer-desc">一條龍網站建置服務，<br />讓你的品牌快速上線。</p>
         </div>
         <div class="footer-links">
@@ -204,6 +237,77 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // --- Theme Toggle ---
+    const html = document.documentElement;
+    const btn = document.getElementById('themeToggle');
+    const saved = localStorage.getItem('wumekit-theme') || 'light';
+    html.setAttribute('data-theme', saved);
+
+    btn.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const next = current === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('wumekit-theme', next);
+    });
+
+    // --- Discord Webhook Form ---
+    const WEBHOOK = 'https://discordapp.com/api/webhooks/1499299619589456013/bbRH7GGtjsHRxP0U5DXrWMICySVWZPRWAT1Nnx1FFr6vKr03Fv91-6xWLyBcPn_M8iIH';
+
+    document.getElementById('contactForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      const msg = document.getElementById('formMsg');
+      btn.disabled = true;
+      btn.textContent = '傳送中...';
+
+      const name    = document.getElementById('f-name').value;
+      const company = document.getElementById('f-company').value;
+      const email   = document.getElementById('f-email').value;
+      const phone   = document.getElementById('f-phone').value;
+      const plan    = document.getElementById('f-plan').value || '未選擇';
+      const note    = document.getElementById('f-msg').value;
+
+      const payload = {
+        embeds: [{
+          title: '\ud83d\udce9 WumeKit 新諮詢',
+          color: 0x4BA265,
+          fields: [
+            { name: '\ud83d\udc64 姓名', value: name, inline: true },
+            { name: '\ud83c\udfe2 公司', value: company || '未填寫', inline: true },
+            { name: '\ud83d\udce7 Email', value: email, inline: true },
+            { name: '\ud83d\udcf1 電話', value: phone || '未填寫', inline: true },
+            { name: '\ud83d\udcb0 方案', value: plan, inline: false },
+            { name: '\ud83d\udcdd 需求', value: note || '未填寫', inline: false },
+          ],
+          timestamp: new Date().toISOString(),
+          footer: { text: 'wumekit.com' }
+        }]
+      };
+
+      try {
+        const res = await fetch(WEBHOOK, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        if (res.ok) {
+          msg.textContent = '\u2705 已成功傳送！我們將盡快與你聯繫。';
+          msg.className = 'form-msg form-msg--ok';
+          e.target.reset();
+        } else {
+          throw new Error('failed');
+        }
+      } catch {
+        msg.textContent = '\u274c 傳送失敗，請直接 Email 聯繫我們。';
+        msg.className = 'form-msg form-msg--err';
+      }
+
+      btn.disabled = false;
+      btn.textContent = '\u9001出諮詢';
+    });
+  </script>
 
 </body>
 </html>
