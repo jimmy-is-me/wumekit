@@ -12,177 +12,237 @@
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav class="nav">
-    <a href="/" class="nav-logo">
-      <span class="logo-mark">W</span>umeKit
-    </a>
-    <div class="nav-links">
-      <a href="#features">服務</a>
-      <a href="#pricing">方案</a>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <span class="theme-icon theme-icon--sun">☀️</span>
-        <span class="theme-icon theme-icon--moon">🌙</span>
-      </button>
-      <a href="#contact" class="btn btn-sm btn-primary">立即諮詢</a>
-    </div>
-  </nav>
+<!-- NAV -->
+<nav class="nav">
+  <a href="/" class="nav-logo"><span class="logo-mark">W</span>umeKit</a>
+  <div class="nav-center">
+    <a href="#features">服務</a>
+    <a href="#process">流程</a>
+    <a href="#pricing">方案</a>
+    <a href="#contact">聯繫</a>
+  </div>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="t-sun">☀️</span>
+      <span class="t-moon">🌙</span>
+    </button>
+    <a href="#contact" class="btn btn-primary btn-sm">立即諮詢</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <span class="badge">一條龍 · 快速上線</span>
-      <h1>你的網站，<br /><span class="gradient-text">我們全包辦。</span></h1>
-      <p class="hero-sub">網域、主機、網站設計一次搞定。<br />不用請工程師，不用懂技術，幾天內上線。</p>
-      <div class="hero-cta">
-        <a href="#pricing" class="btn btn-primary">查看方案</a>
-        <a href="#features" class="btn btn-ghost">了解服務 →</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat"><strong>3天</strong><span>平均上線</span></div>
-        <div class="stat-divider"></div>
-        <div class="stat"><strong>100%</strong><span>包辦服務</span></div>
-        <div class="stat-divider"></div>
-        <div class="stat"><strong>24/7</strong><span>技術支援</span></div>
-      </div>
-    </div>
-    <div class="hero-blob"></div>
-  </section>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#features" class="mm-link">服務</a>
+  <a href="#process" class="mm-link">流程</a>
+  <a href="#pricing" class="mm-link">方案</a>
+  <a href="#contact" class="mm-link">聯繫</a>
+  <a href="#contact" class="btn btn-primary" style="text-align:center;margin-top:8px">立即諮詢</a>
+</div>
 
-  <!-- FEATURES -->
-  <section class="features" id="features">
-    <div class="container">
-      <div class="section-label">服務內容</div>
-      <h2>一個方案，包含所有你需要的。</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">🌐</div>
-          <h3>網域申請</h3>
-          <p>協助選擇並申請最適合品牌的網域名稱，完整設定 DNS 與 Cloudflare 防護。</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🖥️</div>
-          <h3>主機架設</h3>
-          <p>高速穩定的雲端主機，SSL 憑證自動配置，不需自己設定伺服器。</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">✨</div>
-          <h3>網站設計</h3>
-          <p>精選專業模板，客製化品牌色彩與內容，符合你的產業風格。</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🔧</div>
-          <h3>維護管理</h3>
-          <p>定期更新、備份與技術支援，讓你專注本業，網站交給我們顧。</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📊</div>
-          <h3>流量分析</h3>
-          <p>整合 Google Analytics，了解訪客行為，掌握網站成效數據。</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📞</div>
-          <h3>專人服務</h3>
-          <p>從諮詢到上線全程陪伴，修改需求快速回應，不讓你自己摸索。</p>
-        </div>
-      </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-blob"></div>
+  <div class="container hero-inner">
+    <span class="badge">🚀 一條龍 · 快速上線</span>
+    <h1>你的網站，<br /><span class="gradient-text">我們全包辦。</span></h1>
+    <p class="hero-sub">網域、主機、網站設計一次搞定。<br />不用請工程師，不用懀技術，幾天內上線。</p>
+    <div class="hero-cta">
+      <a href="#pricing" class="btn btn-primary btn-lg">查看方案</a>
+      <a href="#process" class="btn btn-outline btn-lg">建置流程 ↓</a>
     </div>
-  </section>
+    <div class="hero-stats">
+      <div class="stat"><strong>3天</strong><span>平均上線</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><strong>100%</strong><span>包辦服務</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><strong>NT$9,900</strong><span>起建置</span></div>
+    </div>
+  </div>
+</section>
 
-  <!-- HOW IT WORKS -->
-  <section class="how" id="how">
-    <div class="container">
-      <div class="section-label">流程</div>
-      <h2>三步驟，網站上線。</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">01</div>
-          <h3>填寫需求</h3>
-          <p>告訴我們你的產業、風格偏好與基本資訊，10 分鐘完成。</p>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="step">
-          <div class="step-num">02</div>
-          <h3>我們動工</h3>
-          <p>選定模板、申請網域、架設主機，全自動化流程快速完成。</p>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="step">
-          <div class="step-num">03</div>
-          <h3>審核上線</h3>
-          <p>確認內容後正式上線，你拿到帳號密碼，網站就是你的了。</p>
-        </div>
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="section-label">服務內容</div>
+    <h2>一個方案，包含所有你需要的。</h2>
+    <div class="features-grid">
+      <div class="feature-card fc-green">
+        <div class="fc-icon">🌐</div>
+        <h3>網域申請</h3>
+        <p>協助選擇最適合品牌的網域，完整設定 DNS 與 Cloudflare 防護。</p>
+      </div>
+      <div class="feature-card fc-blue">
+        <div class="fc-icon">🖥️</div>
+        <h3>主機架設</h3>
+        <p>高速穩定的雲端主機，SSL 憑證自動配置，不需自己設定伺服器。</p>
+      </div>
+      <div class="feature-card fc-purple">
+        <div class="fc-icon">✨</div>
+        <h3>網站設計</h3>
+        <p>精選專業模板，客製化品牌色彩與內容，符合你的產業風格。</p>
+      </div>
+      <div class="feature-card fc-orange">
+        <div class="fc-icon">🔧</div>
+        <h3>維護管理</h3>
+        <p>定期更新、備份與技術支援，讓你專注本業，網站交給我們顧。</p>
+      </div>
+      <div class="feature-card fc-teal">
+        <div class="fc-icon">📊</div>
+        <h3>流量分析</h3>
+        <p>整合 Google Analytics，了解訪客行為，掌握網站成效數據。</p>
+      </div>
+      <div class="feature-card fc-pink">
+        <div class="fc-icon">📞</div>
+        <h3>專人服務</h3>
+        <p>從諮詢到上線全程陪伴，修改需求快速回應，不讓你自己摸索。</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PRICING -->
-  <section class="pricing" id="pricing">
-    <div class="container">
-      <div class="section-label">方案費用</div>
-      <h2>透明定價，無隱藏費用。</h2>
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <div class="plan-name">入門方案</div>
-          <div class="plan-price">
-            <span class="price-setup">NT$ 9,900 <span class="price-note">建置費</span></span>
-            <span class="price-sub">+ NT$ 1,200 / 月</span>
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-label">建置流程</div>
+    <h2>從零到上線，我們全程陥伴。</h2>
+    <div class="process-track">
+      <div class="process-line"></div>
+      <div class="process-steps">
+        <div class="ps">
+          <div class="ps-dot">1</div>
+          <div class="ps-card">
+            <div class="ps-icon">📝</div>
+            <h3>需求訪談</h3>
+            <p>填寫諮詢表單，我們了解你的產業、目標客群與風格偏好。</p>
+            <span class="ps-time">Day 1</span>
           </div>
-          <ul class="plan-features">
-            <li>✓ 網域申請與設定</li>
-            <li>✓ 主機架設（共享雲端）</li>
-            <li>✓ 精選模板套用</li>
-            <li>✓ SSL 安全憑證</li>
-            <li>✓ 每月維護更新</li>
-          </ul>
-          <a href="#contact" class="btn btn-outline">選擇此方案</a>
         </div>
-        <div class="pricing-card pricing-card--featured">
-          <div class="plan-badge">最受歡迎</div>
-          <div class="plan-name">品牌方案</div>
-          <div class="plan-price">
-            <span class="price-setup">NT$ 19,900 <span class="price-note">建置費</span></span>
-            <span class="price-sub">+ NT$ 1,990 / 月</span>
+        <div class="ps">
+          <div class="ps-dot">2</div>
+          <div class="ps-card">
+            <div class="ps-icon">🌐</div>
+            <h3>網域申請</h3>
+            <p>為你搜尋最適合的網域名稱，確認後完成申請與 DNS 設定。</p>
+            <span class="ps-time">Day 1</span>
           </div>
-          <ul class="plan-features">
-            <li>✓ 一切入門方案內容</li>
-            <li>✓ 客製化設計調整</li>
-            <li>✓ 獨立主機資源</li>
-            <li>✓ 電商功能（WooCommerce）</li>
-            <li>✓ Google Analytics 整合</li>
-            <li>✓ 優先技術支援</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary">選擇此方案</a>
         </div>
-        <div class="pricing-card">
-          <div class="plan-name">企業方案</div>
-          <div class="plan-price">
-            <span class="price-setup">客製報價</span>
-            <span class="price-sub">依需求而定</span>
+        <div class="ps">
+          <div class="ps-dot">3</div>
+          <div class="ps-card">
+            <div class="ps-icon">🖥️</div>
+            <h3>主機配置</h3>
+            <p>架設雲端主機、安裝 SSL、電子郵件、備份系統一次完成。</p>
+            <span class="ps-time">Day 1–2</span>
           </div>
-          <ul class="plan-features">
-            <li>✓ 完整客製開發</li>
-            <li>✓ 多語言支援</li>
-            <li>✓ 系統整合（CRM/ERP）</li>
-            <li>✓ 專屬帳號管理</li>
-            <li>✓ 24hr 支援服務</li>
-          </ul>
-          <a href="#contact" class="btn btn-outline">聯繫我們</a>
+        </div>
+        <div class="ps">
+          <div class="ps-dot">4</div>
+          <div class="ps-card">
+            <div class="ps-icon">✨</div>
+            <h3>網站建置</h3>
+            <p>套用模板、填入品牌内容、調整配色與版面布局至你滿意。</p>
+            <span class="ps-time">Day 2–3</span>
+          </div>
+        </div>
+        <div class="ps">
+          <div class="ps-dot">5</div>
+          <div class="ps-card">
+            <div class="ps-icon">🔍</div>
+            <h3>審核與测試</h3>
+            <p>上線前檢查行動裝置、載入速度、SEO 基礎設定與表單功能。</p>
+            <span class="ps-time">Day 3</span>
+          </div>
+        </div>
+        <div class="ps">
+          <div class="ps-dot ps-dot--last">6</div>
+          <div class="ps-card ps-card--accent">
+            <div class="ps-icon">🉐</div>
+            <h3>正式上線</h3>
+            <p>確認內容後一鍵上線，交付帳號密碼，網站完全屬於你。</p>
+            <span class="ps-time">完成 🎉</span>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="container">
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-label">方案費用</div>
+    <h2>透明定價，無隱藏費用。</h2>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="plan-tag">入門</div>
+        <div class="plan-name">入門方案</div>
+        <div class="plan-price">
+          <span class="p-amount">NT$9,900</span>
+          <span class="p-label">建置費</span>
+        </div>
+        <div class="p-sub">+ NT$1,200 / 月</div>
+        <ul class="plan-features">
+          <li>網域申請與設定</li>
+          <li>主機架設（共享雲端）</li>
+          <li>精選模板套用</li>
+          <li>SSL 安全憑證</li>
+          <li>每月維護更新</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline w-full">選擇此方案</a>
+      </div>
+      <div class="pricing-card pricing-card--featured">
+        <div class="plan-badge">最受歡迎</div>
+        <div class="plan-tag plan-tag--white">品牌</div>
+        <div class="plan-name">品牌方案</div>
+        <div class="plan-price">
+          <span class="p-amount">NT$19,900</span>
+          <span class="p-label">建置費</span>
+        </div>
+        <div class="p-sub">+ NT$1,990 / 月</div>
+        <ul class="plan-features">
+          <li>一切入門方案內容</li>
+          <li>客製化設計調整</li>
+          <li>獨立主機資源</li>
+          <li>電商功能（WooCommerce）</li>
+          <li>Google Analytics 整合</li>
+          <li>優先技術支援</li>
+        </ul>
+        <a href="#contact" class="btn btn-white w-full">選擇此方案</a>
+      </div>
+      <div class="pricing-card">
+        <div class="plan-tag plan-tag--dark">企業</div>
+        <div class="plan-name">企業方案</div>
+        <div class="plan-price">
+          <span class="p-amount" style="font-size:1.4rem">客製報價</span>
+        </div>
+        <div class="p-sub">依需求而定</div>
+        <ul class="plan-features">
+          <li>完整客製開發</li>
+          <li>多語言支援</li>
+          <li>系統整合（CRM/ERP）</li>
+          <li>專屬帳號管理</li>
+          <li>24hr 支援服務</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline w-full">聯繫我們</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
       <div class="section-label">聯繫我們</div>
       <h2>準備好了嗎？</h2>
       <p class="contact-sub">填寫表單，我們將在一個工作天內與你聯繫。</p>
       <form class="contact-form" id="contactForm">
         <div class="form-row">
           <div class="form-group">
-            <label>姓名</label>
+            <label>姓名 *</label>
             <input type="text" id="f-name" placeholder="你的姓名" required />
           </div>
           <div class="form-group">
@@ -192,7 +252,7 @@
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label>Email</label>
+            <label>Email *</label>
             <input type="email" id="f-email" placeholder="your@email.com" required />
           </div>
           <div class="form-group">
@@ -213,101 +273,93 @@
           <label>需求說明</label>
           <textarea id="f-msg" placeholder="簡單描述你的網站需求（產業、風格參考等）"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary" id="submitBtn">送出諮詢</button>
+        <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">送出諮詢</button>
         <div class="form-msg" id="formMsg"></div>
       </form>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div>
-          <div class="footer-logo"><span class="logo-mark">W</span>umeKit</div>
-          <p class="footer-desc">一條龍網站建置服務，<br />讓你的品牌快速上線。</p>
-        </div>
-        <div class="footer-links">
-          <a href="https://wumetax.com" target="_blank">wumetax.com</a>
-          <a href="https://wpcd.wumetax.com" target="_blank">wpcd.wumetax.com</a>
-        </div>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo"><span class="logo-mark">W</span>umeKit</div>
+        <p class="footer-desc">一條龍網站建置服務<br />讓你的品牌快速上線。</p>
       </div>
-      <div class="footer-bottom">
-        <span>© 2026 WumeKit. All rights reserved.</span>
+      <div class="footer-nav">
+        <div class="fn-col">
+          <div class="fn-title">服務</div>
+          <a href="#features">服務內容</a>
+          <a href="#process">建置流程</a>
+          <a href="#pricing">方案費用</a>
+        </div>
+        <div class="fn-col">
+          <div class="fn-title">聯繫</div>
+          <a href="#contact">立即諮詢</a>
+        </div>
       </div>
     </div>
-  </footer>
+    <div class="footer-bottom">
+      <span>© 2026 WumeKit. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
 
-  <script>
-    // --- Theme Toggle ---
-    const html = document.documentElement;
-    const btn = document.getElementById('themeToggle');
-    const saved = localStorage.getItem('wumekit-theme') || 'light';
-    html.setAttribute('data-theme', saved);
+<script>
+  // Theme Toggle
+  const html = document.documentElement;
+  const saved = localStorage.getItem('wk-theme') || 'light';
+  html.setAttribute('data-theme', saved);
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    const n = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    html.setAttribute('data-theme', n);
+    localStorage.setItem('wk-theme', n);
+  });
 
-    btn.addEventListener('click', () => {
-      const current = html.getAttribute('data-theme');
-      const next = current === 'light' ? 'dark' : 'light';
-      html.setAttribute('data-theme', next);
-      localStorage.setItem('wumekit-theme', next);
-    });
+  // Hamburger
+  const ham = document.getElementById('hamburger');
+  const mm  = document.getElementById('mobileMenu');
+  ham.addEventListener('click', () => {
+    ham.classList.toggle('open');
+    mm.classList.toggle('open');
+  });
+  mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    ham.classList.remove('open');
+    mm.classList.remove('open');
+  }));
 
-    // --- Discord Webhook Form ---
-    const WEBHOOK = 'https://discordapp.com/api/webhooks/1499299619589456013/bbRH7GGtjsHRxP0U5DXrWMICySVWZPRWAT1Nnx1FFr6vKr03Fv91-6xWLyBcPn_M8iIH';
-
-    document.getElementById('contactForm').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const btn = document.getElementById('submitBtn');
-      const msg = document.getElementById('formMsg');
-      btn.disabled = true;
-      btn.textContent = '傳送中...';
-
-      const name    = document.getElementById('f-name').value;
-      const company = document.getElementById('f-company').value;
-      const email   = document.getElementById('f-email').value;
-      const phone   = document.getElementById('f-phone').value;
-      const plan    = document.getElementById('f-plan').value || '未選擇';
-      const note    = document.getElementById('f-msg').value;
-
-      const payload = {
-        embeds: [{
-          title: '\ud83d\udce9 WumeKit 新諮詢',
-          color: 0x4BA265,
-          fields: [
-            { name: '\ud83d\udc64 姓名', value: name, inline: true },
-            { name: '\ud83c\udfe2 公司', value: company || '未填寫', inline: true },
-            { name: '\ud83d\udce7 Email', value: email, inline: true },
-            { name: '\ud83d\udcf1 電話', value: phone || '未填寫', inline: true },
-            { name: '\ud83d\udcb0 方案', value: plan, inline: false },
-            { name: '\ud83d\udcdd 需求', value: note || '未填寫', inline: false },
-          ],
-          timestamp: new Date().toISOString(),
-          footer: { text: 'wumekit.com' }
-        }]
-      };
-
-      try {
-        const res = await fetch(WEBHOOK, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
-        if (res.ok) {
-          msg.textContent = '\u2705 已成功傳送！我們將盡快與你聯繫。';
-          msg.className = 'form-msg form-msg--ok';
-          e.target.reset();
-        } else {
-          throw new Error('failed');
-        }
-      } catch {
-        msg.textContent = '\u274c 傳送失敗，請直接 Email 聯繫我們。';
-        msg.className = 'form-msg form-msg--err';
-      }
-
-      btn.disabled = false;
-      btn.textContent = '\u9001出諮詢';
-    });
-  </script>
-
+  // Discord Form
+  const WEBHOOK = 'https://discordapp.com/api/webhooks/1499299619589456013/bbRH7GGtjsHRxP0U5DXrWMICySVWZPRWAT1Nnx1FFr6vKr03Fv91-6xWLyBcPn_M8iIH';
+  document.getElementById('contactForm').addEventListener('submit', async e => {
+    e.preventDefault();
+    const sb  = document.getElementById('submitBtn');
+    const msg = document.getElementById('formMsg');
+    sb.disabled = true; sb.textContent = '傳送中...';
+    const payload = { embeds: [{
+      title: '\ud83d\udce9 WumeKit 新諮詢',
+      color: 0x4BA265,
+      fields: [
+        { name: '\ud83d\udc64 姓名',  value: document.getElementById('f-name').value, inline: true },
+        { name: '\ud83c\udfe2 公司',  value: document.getElementById('f-company').value || '未填', inline: true },
+        { name: '\ud83d\udce7 Email', value: document.getElementById('f-email').value, inline: true },
+        { name: '\ud83d\udcf1 電話',  value: document.getElementById('f-phone').value || '未填', inline: true },
+        { name: '\ud83d\udcb0 方案',  value: document.getElementById('f-plan').value || '未選', inline: false },
+        { name: '\ud83d\udcdd 需求',  value: document.getElementById('f-msg').value || '未填', inline: false },
+      ],
+      timestamp: new Date().toISOString(),
+      footer: { text: 'wumekit.com' }
+    }]};
+    try {
+      const res = await fetch(WEBHOOK, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
+      if (res.ok) {
+        msg.textContent = '✅ 已成功傳送！我們將盡快與你聯繫。';
+        msg.className = 'form-msg ok'; e.target.reset();
+      } else throw new Error();
+    } catch { msg.textContent = '❌ 傳送失敗，請直接用 Email 聯繫我們。'; msg.className = 'form-msg err'; }
+    sb.disabled = false; sb.textContent = '送出諮詢';
+  });
+</script>
 </body>
 </html>
